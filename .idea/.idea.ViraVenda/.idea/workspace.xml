@@ -9,167 +9,12 @@
     <projectFile profileName="ViraVenda.Web">ViraVenda.Web/ViraVenda.Web.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eebeab2b-0ec1-4516-a1cd-d03244f5c470" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.CompWeek/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.CompWeek/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.CompWeek/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.CompWeek/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ViraVenda/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api.Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api/Business/Services/AuthenticationService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api/Business/Services/PasswordService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api/Business/Services/RoleService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api/Business/Services/UserService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api/Business/UnitOfService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api/CompWeek.Api.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api/Controllers/AuthenticationController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api/Controllers/PasswordController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api/Controllers/RoleController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api/Controllers/UserController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api/Domain/Interfaces/IUnitOfService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api/Domain/Interfaces/IUnitOfWork.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api/Domain/Interfaces/Repositories/IRoleRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api/Domain/Interfaces/Repositories/IUserPasswordRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api/Domain/Interfaces/Repositories/IUserRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api/Domain/Interfaces/Repositories/IUserRequestRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api/Domain/Interfaces/Services/IAuthenticationService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api/Domain/Interfaces/Services/IPasswordService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api/Domain/Interfaces/Services/IRoleService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api/Domain/Interfaces/Services/IUserService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api/Domain/Models/AppSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api/Domain/Models/SendGridSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api/Infraestructure/Repositories/RoleRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api/Infraestructure/Repositories/UserPasswordRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api/Infraestructure/Repositories/UserRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api/Infraestructure/Repositories/UserRequestRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api/Infraestructure/UnitOfWork.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Api/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Commons/CryptographyHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Commons/CustomException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Commons/DateHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Commons/DocumentHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Commons/EmailHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Commons/PredicateBuilder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Commons/SendgridHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Commons/StringHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Commons/ValidationHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/CompWeek.Domain.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Errors/AuthenticationError.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Errors/RecoverPasswordError.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Errors/RoleError.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Errors/UpdatePasswordError.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Errors/UserError.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Errors/UserPasswordError.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Errors/UserRequestError.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Filters/RoleFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Filters/UserFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Filters/UserPasswordFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Filters/UserRequestFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Interfaces/Repositories/IRepositoryBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Interfaces/Repositories/IRoleRepositoryBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Interfaces/Repositories/IUserPasswordRepositoryBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Interfaces/Repositories/IUserRepositoryBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Interfaces/Repositories/IUserRequestRepositoryBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Interfaces/Services/IAuthenticationServiceBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Interfaces/Services/IPasswordServiceBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Interfaces/Services/IRoleServiceBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Interfaces/Services/IUserServiceBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Models/Role.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Models/User.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Models/UserPassword.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/Models/UserRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/ViewModels/AuthenticationRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/ViewModels/AuthenticationResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/ViewModels/PasswordRecoverRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/ViewModels/PasswordRecoverUpdate.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Domain/ViewModels/PasswordUpdateRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Identity.Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Identity/CompWeek.Identity.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Identity/Config.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Identity/Configuration/ClientStore.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Identity/Configuration/ProfileService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Identity/Configuration/ResourceOwnerPasswordValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Identity/Domain/Interfaces/IUnitOfWork.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Identity/Domain/Interfaces/Repositories/IUserRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Identity/HostingExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Identity/Infrastructure/Repositories/UserRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Identity/Infrastructure/UnitOfWork.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Identity/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Identity/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Identity/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Identity/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Identity/keys/is-signing-key-8A07C33613792955D941AC6E549177F0.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Infrastructure/CompWeek.Infrastructure.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Infrastructure/Contexts/MysqlContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Infrastructure/Mappings/RoleMapping.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Infrastructure/Mappings/UserMapping.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Infrastructure/Mappings/UserPasswordMapping.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Infrastructure/Mappings/UserRequestMapping.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Infrastructure/Migrations/20221023021204_InitialMigration.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Infrastructure/Migrations/20221023021204_InitialMigration.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Infrastructure/Migrations/20221027015112_Add_UserPassword.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Infrastructure/Migrations/20221027015112_Add_UserPassword.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Infrastructure/Migrations/MysqlContextModelSnapshot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Infrastructure/Repositories/RoleRepositoryBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Infrastructure/Repositories/UserPasswordRepositoryBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Infrastructure/Repositories/UserRepositoryBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Infrastructure/Repositories/UserRequestRepositoryBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/App.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/Business/Services/AuthenticationService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/CompWeek.Web.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/Components/AuthenticationComponent.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/Components/Controls/InputPasswordComponent.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/Components/Controls/InputPasswordComponent.razor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/Components/Controls/InputTextComponent.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/Components/Controls/InputTextComponent.razor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/Components/Controls/LoadingComponent.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/Components/Controls/LoadingComponent.razor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/Components/Shared/FooterComponent.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/Components/Shared/FooterComponent.razor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/Components/Shared/HeaderComponent.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/Components/Shared/HeaderComponent.razor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/Domain/Interfaces/Services/IAuthenticationService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/Domain/Models/Credential.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/Domain/Models/PageToken.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/Pages/AuthenticationPage.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/Pages/AuthenticationPage.razor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/Pages/Index.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/Shared/LoginLayout.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/Shared/LoginLayout.razor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/Shared/MainLayout.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/Shared/MainLayout.razor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/_Imports.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/wwwroot/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/wwwroot/css/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/wwwroot/css/bootstrap/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/wwwroot/css/bootstrap/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/wwwroot/css/open-iconic/FONT-LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/wwwroot/css/open-iconic/ICON-LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/wwwroot/css/open-iconic/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/wwwroot/css/open-iconic/font/fonts/open-iconic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/wwwroot/css/open-iconic/font/fonts/open-iconic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/wwwroot/css/open-iconic/font/fonts/open-iconic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/wwwroot/css/open-iconic/font/fonts/open-iconic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/wwwroot/css/open-iconic/font/fonts/open-iconic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/wwwroot/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/wwwroot/icon-192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/wwwroot/images/icon-equals.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/wwwroot/images/icon-facebook.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/wwwroot/images/icon-instagram.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/wwwroot/images/icon-twitter.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/wwwroot/images/logo-equals.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/wwwroot/images/password-reveal-off.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/wwwroot/images/password-reveal-on.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/wwwroot/images/pattern-verde-vertical.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.Web/wwwroot/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompWeek.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="eebeab2b-0ec1-4516-a1cd-d03244f5c470" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ViraVenda/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ViraVenda/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CompWeek.Api/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/CompWeek.Api/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CompWeek.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/CompWeek.Api/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CompWeek.Identity/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/CompWeek.Identity/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CompWeek.Identity/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/CompWeek.Identity/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -300,7 +145,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667937404881</updated>
-      <workItem from="1667937413620" duration="7572000" />
+      <workItem from="1667937413620" duration="8280000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1667964444095</created>
