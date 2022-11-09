@@ -1,0 +1,13 @@
+.vv-login
+{
+    padding: 25%;
+    position: relative;
+}
+
+@media (max-width: 575.98px)
+{
+    .vv-login
+    {
+        padding: 3rem 2rem 2rem;
+    }
+}

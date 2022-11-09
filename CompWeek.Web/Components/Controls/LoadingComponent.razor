@@ -1,0 +1,21 @@
+@if (ShowLoading)
+{
+    <div class="vv-loading" style="visibility: @DisplayResult">
+        <div class="vv-loading-progress">
+            <div class="vv-loading-progress-value"></div>
+        </div>
+    </div>
+}
+
+@code 
+{
+    [Parameter]
+    public bool ShowLoading { get; set; }
+
+    private string DisplayResult { get; set; } = "none";
+
+    protected override void OnParametersSet()
+    {
+        DisplayResult = ShowLoading ? "visible" : "hidden";
+    }
+}

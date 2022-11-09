@@ -1,0 +1,24 @@
+@page "/authentication"
+@layout LoginLayout
+@inject IJSRuntime Js
+@inject NavigationManager NavigationManager
+
+<div class="vv-login">
+    <h1 class="pb-md-4 h1-vv-primary">Acesse sua conta</h1>
+    <AuthenticationComponent AutenticationCallback="@OnAutentication_Done"></AuthenticationComponent>
+</div>
+
+@code 
+{
+    public async Task OnAutentication_Done(List<string> errors)
+    {
+        if (errors.Count == 0)
+        {
+            NavigationManager.NavigateTo("/");
+        }
+        else
+        {
+            await Js.InvokeVoidAsync("alert", string.Join("\n", errors.ToArray()));
+        }
+    }
+}

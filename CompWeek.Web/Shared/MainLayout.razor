@@ -1,0 +1,33 @@
+﻿@using CompWeek.Web.Domain.Interfaces.Services
+@inherits LayoutComponentBase
+@inject NavigationManager NavigationManager
+@inject IAuthenticationService AuthenticationService
+
+<div class="d-flex flex-column align-items-stretch min-vh-100">
+    <div class="row p-0 m-0 flex-md-grow-1">
+        <div class="col-12 p-0 m-0">
+            <HeaderComponent BackgroundColor="#5AB2B9"></HeaderComponent>
+            @Body
+        </div>
+    </div>
+
+    <div class="mt-auto">
+        <FooterComponent></FooterComponent>
+    </div>
+</div>
+
+@code
+{
+    protected override async Task OnInitializedAsync()
+    {
+        await VerifyAutheticated();
+    }
+
+    private async Task VerifyAutheticated()
+    {
+        var credential = await AuthenticationService.GetCurrent();
+        
+        if(credential == null)
+            NavigationManager.NavigateTo("/authentication");
+    }
+}

@@ -1,0 +1,69 @@
+@using Microsoft.AspNetCore.Components
+@using CompWeek.Web.Domain.Interfaces
+@using CompWeek.Domain.ViewModels
+@using CompWeek.Domain.Commons
+@using CompWeek.Web.Domain.Interfaces.Services
+@inject IAuthenticationService AuthenticationService
+
+<EditForm Model="@Login">
+    <div class="row g-4">
+        <div class="col-12">
+            <InputTextComponent @bind-Value="@Login.DocumentNumber" Title="Informe o CPF / CNPJ"></InputTextComponent>
+        </div>
+        <div class="col-12">
+            <InputPasswordComponent @bind-Value="@Login.Password" Title="Informe a senha"></InputPasswordComponent>
+        </div>
+        <div class="col-12 d-grid gap-2">
+            <button type="button" class="btn btn-vv-primary" onclick="@OnLogin_Click" disabled="@IsLoading">Entrar</button>
+        </div>
+        
+        <LoadingComponent ShowLoading="@IsLoading"></LoadingComponent>
+        <FormErrorComponent Errors="@Errors"></FormErrorComponent>
+    </div>
+</EditForm>
+
+@code 
+{
+    [Parameter]
+    public EventCallback<List<string>> AutenticationCallback { get; set; }
+    private AuthenticationRequest Login { get; set; } = null!;
+    private bool IsLoading { get; set; }
+    private List<string> Errors { get; set; } = new();
+
+    protected override void OnInitialized()
+    {
+        Login = new AuthenticationRequest();
+    }
+
+    private async Task OnLogin_Click()
+    {
+        await Authenticate();
+    }
+
+    private async Task Authenticate()
+    {
+        try
+        {
+            var validation = Login.Validate();
+
+            if (validation.IsValid)
+            {
+                IsLoading = true;
+                await AuthenticationService.Authenticate(Login);
+            }
+            
+            Errors = validation.Errors;
+        }
+        catch (CustomException e)
+        {
+            Errors = e.Errors;
+        }
+        finally
+        {
+            IsLoading = false;
+            
+            if (AutenticationCallback.HasDelegate)
+                await AutenticationCallback.InvokeAsync(Errors);
+        }
+    }
+}

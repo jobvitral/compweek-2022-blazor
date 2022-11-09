@@ -1,0 +1,26 @@
+@using System.Linq.Expressions
+@inherits InputBase<string>
+
+<div class="input-field">
+    <label>@Title</label>
+    <input type="text" class="form-control" id="@Id" placeholder="@Placeholder" @bind="@CurrentValue" @bind:event="oninput" />
+</div>
+
+@code 
+{
+    [Parameter]
+    public string Id { get; set; } = Guid.NewGuid().ToString();
+
+    [Parameter]
+    public string Title { get; set; } = "";
+    
+    [Parameter]
+    public string Placeholder { get; set; } = "";
+    
+    protected override bool TryParseValueFromString(string? value, out string result, out string validationErrorMessage)
+    {
+        result = value!;
+        validationErrorMessage = null!;
+        return true;
+    }
+}

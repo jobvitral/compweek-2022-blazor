@@ -1,0 +1,44 @@
+﻿@page "/"
+@using CompWeek.Web.Domain.Interfaces.Services
+@using CompWeek.Web.Domain.Models
+@inject NavigationManager NavigationManager
+@inject IAuthenticationService AuthenticationService
+
+@if (Credential != null)
+{
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                Id: @Credential!.Id
+            </div>
+            <div class="col-12">
+                Nome: @Credential!.Name
+            </div>
+            <div class="col-12">
+                Email: @Credential!.Email
+            </div>
+            <div class="col-12">
+                Scope: @Credential!.Scope
+            </div>
+            <div class="col-12">
+                <button class="btn btn-vv-primary" onclick="@Logout">Sair</button>
+            </div>
+        </div>
+    </div>
+}
+
+@code
+{
+    private Credential? Credential { get; set; }
+    
+    protected override async Task OnInitializedAsync()
+    {
+        Credential = await AuthenticationService.GetCurrent();
+    }
+
+    private async Task Logout()
+    {
+        await AuthenticationService.ClearStorage();
+        NavigationManager.NavigateTo("/login");
+    }
+}

@@ -1,0 +1,26 @@
+@inherits LayoutComponentBase
+
+<div class="d-flex flex-column align-items-stretch min-vh-100">
+    <div class="row p-0 m-0 flex-md-grow-1">
+        <div class="col-12 col-md-6 p-0 m-0 vv-login-layout-title">
+            <HeaderComponent></HeaderComponent>
+            <div>
+                Entendendo <br/>
+                Blazor na <br/>
+                CompWeek
+            </div>
+        </div>
+    
+        <div class="col-12 col-md-6 p-0 m-0">
+            @Body
+        </div>
+    </div>
+
+    <div class="mt-auto">
+        <FooterComponent></FooterComponent>
+    </div>
+</div>
+
+@code
+{
+}

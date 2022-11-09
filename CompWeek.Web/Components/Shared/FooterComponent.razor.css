@@ -1,0 +1,29 @@
+.vv-footer
+{
+    padding: 2.5rem 3rem;
+    background-color: #495C6F;
+}
+
+.vv-footer label
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-align: center;
+    color: #ffffff;
+}
+
+@media (max-width: 575.98px) {
+    .vv-footer
+    {
+        padding: 1rem 1.5rem;
+        background-color: #ffffff;
+    }
+
+    .vv-footer label
+    {
+        color: #4D2463;
+        text-align: center;
+        width: 100%;
+    }
+}
