@@ -51,6 +51,7 @@ Selecione o projeto que deseja fazer o deploy
 
 ### Aplicações
 
+Banco de Dados => localhost:40579  
 IdentityServer => http://localhost:5000  
 Api => http://localhost:5001  
 BlazorApp => http://localhost:5002
