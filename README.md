@@ -48,3 +48,9 @@ Navegue até a pasta raiz do projeto
 Execute o arquivo deploy,sh
 
 Selecione o projeto que deseja fazer o deploy
+
+### Aplicações
+
+IdentityServer => http://localhost:5000  
+Api => http://localhost:5001  
+BlazorApp => http://localhost:5002
