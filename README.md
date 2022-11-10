@@ -1,37 +1,50 @@
-# ViraVenda
+# CompWeek - Blazor
 
-Plataforma Vira Venda  
+Aplicação de teste Blazor para apresentação na CompWeek
 
-## Endereços do container
-### Local
-> Host: localhost  
-> Porta: 5002
+## Criacao do banco de dados
 
-### Remoto
-> Host: 10.88.0.3
-> Porta: 80
+Será utilizado o podman como ferramenta de container. Essa ferramenta deve estar instalada no computador
 
-## Rotas
-Rotas da API de usuários
+### Criar o container de banco de dados
 
-### v1/authentication
-> **[POST]** /v1/authentication/token - Efetua login do identity server e retorna um token de acesso
+Instruções foram executadas no Linux
 
-### v1/roles
-> **[GET]** /v1/roles - Retorna uma lista de grupos de usuário  
-> **[GET]** /v1/roles/:id - Retorna um grupo de usuário buscado por ID  
-> **[POST]** /v1/roles - Insere um grupo de usuário  
-> **[PUT]** /v1/roles - Atualiza um grupo de usuário  
-> **[DELETE]** /v1/roles/:id - Deleta um grupo de usuário
+sudo mkdir /home/jobvitral/db-compweek
 
-### v1/users
-> **[GET]** /v1/users - Retorna uma lista de usuários  
-> **[GET]** /v1/users/:id - Retorna um usuário buscado por ID  
-> **[POST]** /v1/users - Insere um usuário  
-> **[PUT]** /v1/users - Atualiza um usuário  
-> **[DELETE]** /v1/users/:id - Deleta um usuário por ID    
+sudo podman run --name db-compweek -v /home/jobvitral/db-compweek:/var/lib/mysql --env MARIADB_USER=compweek --env MARIADB_PASSWORD=Compweek001 -e MARIADB_ROOT_PASSWORD=Compweek001 -p 40579:3306 -d mariadb:latest
 
-### v1/password
-> **[PUT]** v1/password - Atualiza uma senha de usuário  
-> **[POST]** v1/password/recover - Solicita uma recuperacao de senha  
-> **[PUT]** v1/password/recover - Atualiza uma senha por recuperação de senha
+### Criar o banco de dados
+
+sudo podman exec -it db-compweek mariadb --user root -p
+
+create database compweek;
+
+grant all privileges on compweek.* TO 'compweek'@'%' identified by 'Compweek001';
+
+### Configurar o SDK do dotnet
+
+É nescessário instalar o SDK do dotnet 6.0 na maquina. https://dotnet.microsoft.com/en-us/download
+
+Após instalar a ferramenta do entity framework para fazer o migration do banco de dados
+
+dotnet tool install --global dotnet-ef
+
+### Inicializando o banco de dados
+
+Navegue ate a pasta do projeto de infraestrutura: cd CompWeek.Infrastructure
+
+Execute: dotnet ef database update --startup-project ../CompWeek.Api
+
+Será criado o usuário:
+
+Documento: 05502112688
+Senha: 123456
+
+### Criando o container do servidor de identidade e da API
+
+Navegue até a pasta raiz do projeto
+
+Execute o arquivo deploy,sh
+
+Selecione o projeto que deseja fazer o deploy

@@ -1,9 +1,7 @@
 using Blazored.LocalStorage;
 using Blazored.SessionStorage;
 using CompWeek.Web;
-using CompWeek.Web.Business;
 using CompWeek.Web.Business.Services;
-using CompWeek.Web.Domain.Interfaces;
 using CompWeek.Web.Domain.Interfaces.Services;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;

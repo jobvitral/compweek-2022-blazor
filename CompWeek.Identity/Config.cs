@@ -13,6 +13,7 @@ public static class Config
     public static IEnumerable<ApiScope> ApiScopes =>
         new List<ApiScope>
         {
+            new ApiScope(name: "api", displayName: "Api"),
             new ApiScope(name: "administrator", displayName: "Administrator"),
             new ApiScope(name: "company", displayName: "Company"),
             new ApiScope(name: "seller", displayName: "Seller"),

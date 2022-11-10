@@ -3,19 +3,19 @@ WORKDIR /app
 EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
-WORKDIR /viravenda-api
+WORKDIR /compWeek-api
 
-COPY ["ViraVenda.Api/ViraVenda.Api.csproj", "ViraVenda.Api/"]
-RUN dotnet restore "ViraVenda.Api/ViraVenda.Api.csproj"
+COPY ["CompWeek.Api/CompWeek.Api.csproj", "CompWeek.Api/"]
+RUN dotnet restore "CompWeek.Api/CompWeek.Api.csproj"
 
 COPY . .
-WORKDIR "/viravenda-api/ViraVenda.Api"
-RUN dotnet build "ViraVenda.Api.csproj" -c Release -o /app/build
+WORKDIR "/compWeek-api/CompWeek.Api"
+RUN dotnet build "CompWeek.Api.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "ViraVenda.Api.csproj" -c Release -o /app/publish
+RUN dotnet publish "CompWeek.Api.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "ViraVenda.Api.dll"]
+ENTRYPOINT ["dotnet", "CompWeek.Api.dll"]
