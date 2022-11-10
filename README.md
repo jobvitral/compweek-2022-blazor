@@ -12,7 +12,7 @@ Instruções foram executadas no Linux
 
 sudo mkdir /home/jobvitral/db-compweek
 
-sudo podman run --name db-compweek -v /home/jobvitral/db-compweek:/var/lib/mysql --env MARIADB_USER=compweek --env MARIADB_PASSWORD=Compweek001 -e MARIADB_ROOT_PASSWORD=Compweek001 -p 40579:3306 -d mariadb:latest
+sudo podman run --name db-compweek --network=podman  -v /home/jobvitral/db-compweek:/var/lib/mysql --env MARIADB_USER=compweek --env MARIADB_PASSWORD=Compweek001 -e MARIADB_ROOT_PASSWORD=Compweek001 --ip=10.88.0.2 -p 40579:3306 -d mariadb:latest
 
 ### Criar o banco de dados
 
